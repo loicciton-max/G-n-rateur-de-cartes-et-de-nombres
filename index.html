@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Générateur</title>
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a1e4d'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle'%3E%F0%9F%83%8F%3C/text%3E%3C/svg%3E">
+
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a1e4d'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle'%3E%F0%9F%83%8F%3C/text%3E%3C/svg%3E">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="app">
+
+  <!-- Écran Générateur -->
+  <div class="screen actif" id="ecran-generateur">
+
+    <button class="zone-forcage" id="zone-forcage" aria-hidden="true"></button>
+
+    <h1 class="generateur-titre" id="titre-generateur">
+      Générateur
+    </h1>
+
+    <div class="cartes-choix">
+
+      <button class="carte-choix" id="btn-choisir-carte">
+
+        <div class="carte-choix-icone">🃏</div>
+
+        <div class="carte-choix-textes">
+
+          <span class="carte-choix-label">
+            Choisir une carte
+          </span>
+
+          <span class="carte-choix-valeur" id="valeur-carte">
+            Aucune sélection
+          </span>
+
+        </div>
+
+      </button>
+
+
+      <button class="carte-choix" id="btn-choisir-nombre">
+
+        <div class="carte-choix-icone">🔢</div>
+
+        <div class="carte-choix-textes">
+
+          <span class="carte-choix-label">
+            Choisir un nombre
+          </span>
+
+          <span class="carte-choix-valeur" id="valeur-nombre">
+            Aucune sélection
+          </span>
+
+        </div>
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- Écran Choisir une carte -->
+  <div class="screen" id="ecran-carte">
+
+    <div class="sous-ecran-entete">
+
+      <button class="btn-retour" id="btn-retour-carte">
+        ←
+      </button>
+
+      <span class="sous-ecran-titre">
+        Choisir une carte
+      </span>
+
+    </div>
+
+
+    <div class="grille-cartes-conteneur">
+
+      <div class="grille-cartes" id="grille-cartes"></div>
+
+    </div>
+
+
+    <div class="actions-bas">
+
+      <button class="btn-action" id="btn-melanger">
+        <span class="btn-action-icone">🔀</span>
+        Mélanger
+      </button>
+
+      <button class="btn-action" id="btn-face-cachee">
+        <span class="btn-action-icone">🂠</span>
+        Face cachée
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- Écran Choisir un nombre -->
+  <div class="screen" id="ecran-nombre">
+
+    <div class="sous-ecran-entete">
+
+      <button class="btn-retour" id="btn-retour-nombre">
+        ←
+      </button>
+
+      <span class="sous-ecran-titre">
+        Choisir un nombre
+      </span>
+
+    </div>
+
+
+    <div class="grille-cartes-conteneur">
+
+      <div class="grille-cartes" id="grille-nombres"></div>
+
+    </div>
+
+
+    <div class="actions-bas">
+
+      <button class="btn-action" id="btn-melanger-nombre">
+        <span class="btn-action-icone">🔀</span>
+        Mélanger
+      </button>
+
+      <button class="btn-action" id="btn-face-cachee-nombre">
+        <span class="btn-action-icone">🂠</span>
+        Face cachée
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
